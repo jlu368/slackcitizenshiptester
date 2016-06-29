@@ -1,0 +1,9 @@
+[Core]
+Name = CitizenshipTest
+Module = bot
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Asks US history questions
