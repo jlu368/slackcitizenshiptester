@@ -4,7 +4,7 @@ import datetime
 
 import dateutil.parser as parser
 from questions import questions
-from errbot import BotPlugin
+from errbot import BotPlugin, botcmd
 
 class CitizenshipTest(BotPlugin):  # pylint: disable=too-many-ancestors
 
@@ -26,3 +26,7 @@ class CitizenshipTest(BotPlugin):  # pylint: disable=too-many-ancestors
     def activate(self):
         super().activate()
         self.start_poller(1500, self.idle_check)
+
+    @botcmd()
+    def quizzer(self, msg, args):
+        self.quiz("<#C1MFBRH3L>")
