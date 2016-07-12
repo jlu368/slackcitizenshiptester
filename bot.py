@@ -25,7 +25,7 @@ class CitizenshipTest(BotPlugin):  # pylint: disable=too-many-ancestors
 
     def activate(self):
         super().activate()
-        self.start_poller(1500, self.idle_check)
+        self.start_poller(900, self.idle_check)
 
     @botcmd()
     def quizzer(self, msg, args):
