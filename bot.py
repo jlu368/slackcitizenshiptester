@@ -13,7 +13,7 @@ class CitizenshipTest(BotPlugin):  # pylint: disable=too-many-ancestors
         start_min = datetime.date.today().isoformat() + "T14:00:00"
         start_max = datetime.date.today().isoformat() + "T22:00:00"
         # If time is between 4 and 4:01, run the function.
-        if parser.parse(start_min) < datetime.datetime.now() < parser.parse(start_max) and datetime.date.weekday() < 5:
+        if (parser.parse(start_min) < datetime.datetime.now() < parser.parse(start_max)) and datetime.date.weekday() < 5:
             self.quiz("<#C1MFBRH3L>")
 
     def quiz(self, channel):
